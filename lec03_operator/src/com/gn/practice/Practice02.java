@@ -15,8 +15,18 @@ public class Practice02 {
 	System.out.println(result); //186
 	result /= 3;
 	System.out.println(result); //62
-	result %= 30;
+	result %= 3;
 	System.out.println(result); //2
+	
+	// 홀수, 짝수
+	// 1,3,5... -> 2로 나눴을 때 나머지 1
+	// 2,4,5... -> 2로 나눴을 때 나머지 0
+	
+	
+	
+	
+	
+	
 
 	}
 
