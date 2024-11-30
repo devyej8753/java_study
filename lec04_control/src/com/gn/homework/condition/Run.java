@@ -12,7 +12,7 @@ public class Run {
 		System.out.println("4. 철수네 공장 ");
 		System.out.println("5. 헬스 마니아 철수 ");
 		System.out.println("6. 합격인가? 불합격인가? ");
-		System.out.print("선택 :");
+		System.out.print("선택 : ");
 		
 		Scanner sc = new Scanner(System.in);
 		int menu = sc.nextInt();
@@ -20,7 +20,13 @@ public class Run {
 		Practice practice = new Practice();
 		switch(menu) {
 			case 1 :practice.practice01();
-			break;
+				break;
+			case 2 :practice.practice02();
+				break;
+			case 3 :practice.practice03();
+				break;
+			case 4 :practice.practice04();
+				break;
 		}
 	}
 }

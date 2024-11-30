@@ -34,12 +34,87 @@ public class Practice {
 		System.out.print("월 : ");
 		int num1 = sc.nextInt();
 		System.out.print("기온 : ");
-		int num2 = sc.nextInt();
-		
-		
+		int tem = sc.nextInt();
+		if(num1==3||num1==4||num1==5) {
+			System.out.println("봄");
+			
+		}else if(num1==6||num1==7||num1==8) {
+			System.out.println("여름");
+			if(tem >= 35) {
+				System.out.println("폭염 경보");
+			}else if(tem >= 33) {
+				System.out.println("폭염 주의보");
+			}
+		}else if(num1==9||num1==10||num1==11) {
+			System.out.println("가을");
+		}else if(num1==12||num1==1||num1==2) {
+			System.out.println("겨울");
+			}else if(tem <= -15) {
+				System.out.println("한파 경보");
+			}else if(tem <= -12) {
+				System.out.println("한파 주의보");
+		}else {
+			sc.close();
+			System.out.println("해당된 계절이 없습니다");
+		}
 	}
+			
 		
+	public void practice03() {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("첫 번째 정수 : ");
+			int su =sc.nextInt();
+			System.out.print("두 번째 정수 : ");
+			int su1 =sc.nextInt();
+			System.out.print("세 번째 정수 : ");
+			int su2 =sc.nextInt();
+			
+			int min = su < su1 ? (su < su2 ? su : su2) : (su1 < su2 ? su1 : su2);
+			System.out.println("세 수 중에서 가장 작은 수는 "+min+"입니다");
+			sc.close();
+			
+		}
 		
+	public void practice04() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("=== 철수네 공장 ===");
+		System.out.print("수집된 코드 : ");
+		int code = sc.nextInt();
 		
-		
+		switch (code) {
+			case 400 :
+				System.out.println("잘못된 요청입니다.");
+				break;
+			case 404 :
+				System.out.println("요청하신 서비스를 찾을수 없습니다.");
+				break;
+			case 500 :
+				System.out.println("처리 방법을 알 수 없는 문제가 발생했습니다.");
+				break;
+			case 503 : 
+				System.out.println("일시적인 서버 오류가 발생했습니다.");
+				break;
+			default :
+				System.out.println("알 수 없는 오류가 발생하였습니다.");
+				
+		}
+		sc.close();
 	}
+
+}
+
+
+
+//			if (code == 400) {
+//				System.out.println("잘못된 요청입니다.");
+//			}else if (code == 404) {
+//				System.out.println("요청하신 서비스를 찾을 수 없습니다.");
+//			}else if (code == 500) {
+//				System.out.println("처리 방법을 알 수 없는 문제가 발생했습니다.");
+//			}else if (code == 503) {
+//				System.out.println("일시적인 서버 오류가 발생하였습니다.");
+//				
+//			}else {
+//				System.out.println("알 수 없는 오류가 발생하였습니다.");
+//			}
+//			
