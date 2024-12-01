@@ -100,21 +100,81 @@ public class Practice {
 		}
 		sc.close();
 	}
+	
+	public void practice05() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("=== 헬스 마니아 철수 ===");
+		System.out.println("1. 스쿼트");
+		System.out.println("2. 데드리프트");
+		System.out.println("3. 벤치 프레스");
+		System.out.println("4. 풀업");
+		System.out.println("5. 종료");
+		int su =sc.nextInt();
+		
+		String msg = "";
+		
+		if(0<su&&su<=5) {
+			if(su==1) {
+				msg = "스쿼트 운동 시간입니다.";
+			}else if(su==2) {
+				msg = "데드리프트 운동 시간입니다.";
+			}else if(su==3) {
+				msg = "벤치 프레스 운동 시간입니다.";
+			}else if(su==4) {
+				msg = "풀업 운동 시간입니다.";
+			}else if(su==5) {
+				msg = "오늘도 수고하셨습니다.";
+			}
+		}else if(su<=0) {
+			msg = "양수만 입력해주세요.";
+		} else {
+			msg = "목록에 있는 숫자만 입력해주세요.";
+		}
+		System.out.println(msg);
+		sc.close();
+		
+				
+				
+			}
+		
+	}
+			
+		
+		
 
-}
 
 
 
-//			if (code == 400) {
-//				System.out.println("잘못된 요청입니다.");
-//			}else if (code == 404) {
-//				System.out.println("요청하신 서비스를 찾을 수 없습니다.");
-//			}else if (code == 500) {
-//				System.out.println("처리 방법을 알 수 없는 문제가 발생했습니다.");
-//			}else if (code == 503) {
-//				System.out.println("일시적인 서버 오류가 발생하였습니다.");
-//				
+
+
+
 //			}else {
-//				System.out.println("알 수 없는 오류가 발생하였습니다.");
-//			}
-//			
+//				if(su == 2) {
+//					System.out.println("데드리프트 운동 시간입니다.");
+//				}else {
+//					if(su ==3 ) {
+//						System.out.println("벤치 프레스 운동 시간입니다.");
+//					}else {
+//						if(su == 4) {
+//							System.out.println("풀업 운동 시간입니다.");
+//						}else {
+//							if(su == 5) {
+//								System.out.println("오늘도 수고하셨습니다.");
+//							}else {
+//								System.out.println("목록에 있는 숫자만 입력해주세요.");
+//							}
+//		if(su == 1) {
+//			System.out.print("스쿼트 운동 시간입니다.");
+//		}else if (su == 2) {
+//			System.out.print("데드리프트 운동 시간입니다.");
+//		}else if (su == 3) {
+//			System.out.print("벤치 프레스 운동 시간입니다.");
+//		}else if (su == 4) {
+//			System.out.print("풀업 운동 시간입니다.");
+//		}else if (su == 5) {
+//			System.out.print("오늘도 수고하셨습니다");
+//		}else {
+//			System.out.print("목록에 있는 숫자만 입력해주세요.");
+//		}
+//		sc.close();

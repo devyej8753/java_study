@@ -27,6 +27,7 @@ public class Run {
 				break;
 			case 4 :practice.practice04();
 				break;
+			case 5 :practice.practice05();
 		}
 	}
 }
