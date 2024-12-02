@@ -134,7 +134,7 @@ public class Practice {
 		System.out.println(msg);
 		sc.close();
 			}
-		public void Practice06() {
+		public void practice06() {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("=== 합격인가? 불합격인가? ===");
 			System.out.println("각 과목의 점수를 입력 하세요");
@@ -142,6 +142,9 @@ public class Practice {
 			int num1 = sc.nextInt();
 			System.out.print("소프트웨어개발 점수: ");
 			int num2 = sc.nextInt();
+			System.out.print("데이터베이스구축 점수: ");
+			int num3 = sc.nextInt();
+			System.out.print("프로그래밍언어활용 점수: ");
 			
 			
 			
