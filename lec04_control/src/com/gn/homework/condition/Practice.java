@@ -133,11 +133,19 @@ public class Practice {
 		}
 		System.out.println(msg);
 		sc.close();
-		
-				
-				
 			}
-		
+		public void Practice06() {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("=== 합격인가? 불합격인가? ===");
+			System.out.println("각 과목의 점수를 입력 하세요");
+			System.out.print("소프트웨어설계 점수: ");
+			int num1 = sc.nextInt();
+			System.out.print("소프트웨어개발 점수: ");
+			int num2 = sc.nextInt();
+			
+			
+			
+		}
 	}
 			
 		
