@@ -1,6 +1,6 @@
 package com.gn.practice;
 import java.util.Scanner;
-public class Practince02 {
+public class Practice02 {
 
 	public static void main(String[] args) {
 /*		사용자로부터 성적을 입력 받아서,
