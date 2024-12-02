@@ -61,6 +61,7 @@ public class Practice {
 			
 		
 	public void practice03() {
+		System.out.println("=== 세개의 정수 비교하기 ===");
 			Scanner sc = new Scanner(System.in);
 			System.out.print("첫 번째 정수 : ");
 			int su =sc.nextInt();
@@ -96,7 +97,7 @@ public class Practice {
 				break;
 			default :
 				System.out.println("알 수 없는 오류가 발생하였습니다.");
-				
+				break;
 		}
 		sc.close();
 	}
@@ -145,11 +146,49 @@ public class Practice {
 			System.out.print("데이터베이스구축 점수: ");
 			int num3 = sc.nextInt();
 			System.out.print("프로그래밍언어활용 점수: ");
+			int num4 = sc.nextInt();
+			System.out.print("정보시스템구축관리 점수: ");
+			int num5 = sc.nextInt();
 			
-			
+			int sum = (num1+num2+num3+num4+num5);
+			int avg = (sum/5);
+			String nu = "";
+			if(num1 >=40&&num2>=40&&num3>=40&&num4>=40&&num5>=40) {
+				if(avg>=60) {
+					System.out.print("합격을 축하합니다!");
+				}else {
+					System.out.print("평균 점수 60점 미만으로 불합격입니다.");
+				}	
+				
+			}else {
+				if(num1<40) {
+					nu += "소프트웨어설계 점수 ";
+				}
+				if(num2<40) {
+					nu += "소프트웨어개발 점수 ";
+				}
+				if(num3<40) {
+					nu += "데이터베이스구축 점수 ";
+				}
+				if(num4<40) {
+					nu += "프로그래밍언어활용 점수 ";
+				}
+				if(num5<40) {
+					nu += "정보시스템구축관리 점수 ";
+				}
+				System.out.println(nu+"과락으로 불합격입니다.");
+			}
+				sc.close();
+			}
 			
 		}
-	}
+
+			
+			
+			
+			
+
+
 			
 		
 		
