@@ -106,6 +106,8 @@ public class Practice {
 	}
 	
 	public void practice06() {
+		Scanner sc = new Scanner(System.in);
+		
 		
 	}
 	public void practice07() {
