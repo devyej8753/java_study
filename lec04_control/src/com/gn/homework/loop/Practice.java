@@ -151,8 +151,7 @@ public class Practice {
 		char chr;
 		do {
 			System.out.print("문자열 : ");
-			str = sc.nextLine();
-			
+			str = sc.nextLine();			
 			System.out.print("문자 : ");
 			char ch = sc.next().charAt(0);
 			
@@ -162,7 +161,6 @@ public class Practice {
 					count++;
 				}
 			}
-			
 			System.out.println("포함된 개수 : "+count);
 			
 			do {
