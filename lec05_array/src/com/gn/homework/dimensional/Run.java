@@ -18,7 +18,16 @@ public class Run {
 		Practice practice = new Practice();
 		switch(menu) {
 			case 1 : practice.practice01();break;
+			case 2 : practice.practice02();break;
+			case 3 : practice.practice03();break;
+			case 4 : practice.practice04();break;
+			case 5 : practice.practice05();break;
+			case 6 : practice.practice06();break;
+			
 		}
+		
+		
+		
 		
 		
 		
