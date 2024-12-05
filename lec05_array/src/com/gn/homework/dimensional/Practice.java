@@ -37,30 +37,13 @@ public class Practice {
 			int sus = sc.nextInt();
 			arr[i] = sus;
 			}
-		for(int nums : arr) {
-			System.out.print(nums);
-			total+=nums;
+		for(int sus : arr) {
+			System.out.print(sus+" ");
+			total += sus;
 		}
 		System.out.print("\n");
-	//	System.out.println("총합 : " total);
-		
-		
-//		int[] scores = {4, -4, 3, -3, 2};
-//		int total = scores[0];
-//		for(int i = 0; i < scores.length ; i++) {
-//			scores[i] = scores[i];
-//			System.out.print(scores[i]);
-//		}
-//		int sum = 0;
-//		for(int su : scores) {
-//			System.out.print(su);
-//			sum+=su;
-//		}
-//		System.out.print("\n");
-//		System.out.println("총합 : "+sum);
-//		
-		
-		
+		System.out.print("총합 : "+total);
+	
 	}
 	public void practice03() {
 		
