@@ -58,7 +58,7 @@ public class Person {
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
-	public void setphone(String phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public void setEmail(String email) {

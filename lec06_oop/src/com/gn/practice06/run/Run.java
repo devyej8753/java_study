@@ -12,7 +12,7 @@ public class Run {
 		p.setName("김철수");
 		p.setAge(43);
 		p.setGender('M');
-		p.setphone("010-111-1111");
+		p.setPhone("010-111-1111");
 		p.setEmail("kcs@gmail.com");
 		System.out.println(p.information());
 		
