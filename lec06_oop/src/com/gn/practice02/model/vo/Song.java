@@ -1,0 +1,13 @@
+package com.gn.practice02.model.vo;
+
+public class Song {
+
+	public String songTitle;
+	protected String singer;
+	private static int puvlishYear =2009;
+	private static final String ALBUM_NAME ="1집";
+		
+
+	}
+
+

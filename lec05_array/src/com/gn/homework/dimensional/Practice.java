@@ -46,6 +46,15 @@ public class Practice {
 	
 	}
 	public void practice03() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 : ");
+		int num1 = sc.nextInt();
+		int su1 = 0;
+		int[] arr1 = new int[num1];
+		for(int i = 0 ; i < arr1.length ; i++) {
+			
+		}
+		
 		
 	}
 	public void practice04() {
