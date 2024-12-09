@@ -1,11 +1,13 @@
 package com.gn.study.controller;
 
+import com.gn.study.model.vo.Alarm;
 import com.gn.study.model.vo.Animal;
 import com.gn.study.model.vo.Beverage;
 import com.gn.study.model.vo.Cat;
 import com.gn.study.model.vo.Coffee;
 import com.gn.study.model.vo.Dog;
 import com.gn.study.model.vo.Earth;
+import com.gn.study.model.vo.FireAlarm;
 import com.gn.study.model.vo.Mars;
 import com.gn.study.model.vo.OrangeJuice;
 import com.gn.study.model.vo.Planet;
@@ -80,6 +82,10 @@ public class Run {
 		Animal cat = new Cat();
 		cat.sound();
 	
+		// 7. 인터페이스
+		Alarm a = new FireAlarm();
+		System.out.println(Alarm.MAX_VOLUME);
+		a.soundAlarm();
 		
 	}
 
