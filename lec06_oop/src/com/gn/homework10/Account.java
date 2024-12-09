@@ -15,11 +15,10 @@ public class Account {
 	public String getaccountNumber() {
 		return accountNumber;
 	}
-	public int balance() {
+	public int getbalance() {
 		return balance;
 	}
-	public void deposit(int amount) {
-		balance += amount;
+	
+
 	}
 	
-}
