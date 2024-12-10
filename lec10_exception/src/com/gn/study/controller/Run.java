@@ -1,6 +1,9 @@
 package com.gn.study.controller;
 
+import com.gn.study.model.vo.Account;
 import com.gn.study.model.vo.Calculator;
+import com.gn.study.model.vo.InsufficientBalanceException;
+import com.gn.study.model.vo.User;
 
 public class Run {
 	public static void main(String[] args) {
@@ -38,7 +41,39 @@ public class Run {
 		Calculator c = new Calculator();
 		c.divide(3, 0);
 		
+		System.out.println("==== throw ====");
 		
+		User u = new User();
+		try {
+			u.checkAge(10);
+		}catch(IllegalArgumentException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("==== throws ====");
+//		try {
+//			u.nameLength(null);
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//		System.out.println("확인!!");
+		try {
+			u.checkAge(10);
+			u.nameLength(null);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("확인!!");
+			
+	
+	
+	Account ac = new Account("김철수",1000);
+	try {
+		ac.withdraw(5000);
+	}catch(InsufficientBalanceException e) {
+		e.printStackTrace();
 	}
+	
+}
 }
 	

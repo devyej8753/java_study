@@ -1,6 +1,6 @@
 package com.gn.practice;
 
-public class Practine02 {
+public class Practice02 {
 	
 	public static void main(String[] args) {
 	//1) 문제

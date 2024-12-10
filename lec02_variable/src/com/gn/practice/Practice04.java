@@ -1,6 +1,6 @@
 package com.gn.practice;
 
-public class Practince04 {
+public class Practice04 {
 
 	public static void main(String[] args) {
 		int num1 = 10;

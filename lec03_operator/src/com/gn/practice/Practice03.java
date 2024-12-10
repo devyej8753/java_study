@@ -1,6 +1,6 @@
 package com.gn.practice;
 import java.util.Scanner;
-public class Practince03 {
+public class Practice03 {
 
 	public static void main(String[] args) {
 		/*	1) 문제
