@@ -1,8 +1,11 @@
 package com.gn.study.controller;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import com.gn.study.model.vo.Container;
+import com.gn.study.model.vo.Student;
 
 public class Run {
 	public static void main(String[] args) {
@@ -80,6 +83,7 @@ public class Run {
 		System.out.println(nums);
 		
 		// 5. 요소 조회
+		System.out.println("=== 요소 조회 ===");
 		System.out.println(nums.get(0));
 		
 		for(int i = 0 ; i < nums.size() ; i++) {
@@ -88,5 +92,46 @@ public class Run {
 		for(Integer n : nums) {
 			System.out.println(n);
 		}
+		String a = new String();
+		
+		// ArrayList의 정렬
+		System.out.println("정렬전 : "+nums);
+		
+		Collections.sort(nums);
+		
+		System.out.println("오름차순 : "+nums);
+		
+		Collections.sort(nums, Collections.reverseOrder());
+		
+		System.out.println("내림차순 : "+nums);
+		
+		// ArrayList<객체>
+		List<Student> Students = new ArrayList<Student>();
+		Students.add(new Student("김철수",50));
+		
+		System.out.println(Students);
+		
+		if(Students.contains(new Student("김철수",50))) {
+			System.out.println("O");
+		}else {
+			System.out.println("X");
+		}
+		System.out.println("==============================");
+		
+		if(Students.indexOf(new Student("김철수",50)) != -1) {
+			System.out.println("O");
+		}else {
+			System.out.println("X");
+		}
+		
+		Students.add(new Student("이영희",40));
+		Students.add(new Student("홍길동",30));
+		
+		System.out.println("정렬 전 : "+Students);
+		Collections.sort(Students);
+		System.out.println("정렬 후 : "+Students);
+		
+		
+		
 	}
 }

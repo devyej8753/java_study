@@ -6,8 +6,8 @@ public class Dish extends Menu{
 	public Dish() {}
 	
 	public Dish(String name, int price, String ingredients) {
-		super.toString();
-		return;
+		super(name,price);
+		this.ingredients = ingredients;
 	}
 	
 	public String getIngredients() {
