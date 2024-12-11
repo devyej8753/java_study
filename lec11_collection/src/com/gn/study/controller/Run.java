@@ -1,5 +1,7 @@
 package com.gn.study.controller;
 
+import java.util.*;
+
 import com.gn.study.model.vo.Container;
 
 public class Run {
@@ -47,7 +49,44 @@ public class Run {
 		Container<String> tain = new Container<String>();
 		tain.setItem("안녕하세요!");
 		
+		System.out.println("==== List ====");
+		// List(ArrayList)
+		// 1. 선언과 생성
+		List<String> list = new ArrayList<String>();
 		
+		// 2. 추가
+		List<String> meal = new ArrayList<String>();
+		meal.add("아침");
+		meal.add("점심");
+		System.out.println(meal);
 		
+		meal.add(1,"간식");
+		System.out.println(meal);
+		
+		// 3. 삭제
+		meal.remove(1);
+		System.out.println(meal);
+		
+		meal.clear();
+		System.out.println(meal);
+		
+		// 4. 요소 변경
+		List<Integer> nums = new ArrayList<Integer>();
+		nums.add(15);
+		nums.add(10);
+		nums.add(23);
+		System.out.println(nums);
+		nums.set(1, 500);
+		System.out.println(nums);
+		
+		// 5. 요소 조회
+		System.out.println(nums.get(0));
+		
+		for(int i = 0 ; i < nums.size() ; i++) {
+			System.out.println(i+" : "+nums.get(i));
+		}
+		for(Integer n : nums) {
+			System.out.println(n);
+		}
 	}
 }
