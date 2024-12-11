@@ -17,6 +17,8 @@ public class Run {
 			Login.login(id, pwd);
 		}catch(InvalidCredentialsException e) {
 			System.out.println(e.getMessage());
+		}finally {
+			sc.close();
 		}
 		
 		
