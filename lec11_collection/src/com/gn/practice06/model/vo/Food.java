@@ -3,7 +3,7 @@ package com.gn.practice06.model.vo;
 import java.util.Objects;
 
 public class Food {
-	private String name;
+	public String name;
 	private int price;
 	
 	public Food() {}

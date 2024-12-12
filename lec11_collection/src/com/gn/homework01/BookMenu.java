@@ -64,30 +64,60 @@ public class BookMenu {
 	}
 	public void	selectList() {
 		System.out.println("=== 전체 조회 ===");
-		BookController b = new BookController();
 		List<Book> arr = bc.selectList();
 		if(arr.isEmpty()) {
 			System.out.println("존재하는 도서가 없습니다.");
 		}else {
 			for(Book a : arr) {
 				System.out.println(a);
-				
 			}
 		}
-		
-		
-		
-		
-		
-		
+	}
+	public void	searchBook() {
+		System.out.println("=== 도서 검색 ===");
+		System.out.print("검색어 : ");
+		String keyword = sc.next();
+		List<Book> search = bc.searchBook(keyword);
+		if(search.isEmpty()) {
+			System.out.println("검색 결과가 없습니다.");
+		}else {
+			for(Book a : search) {
+				System.out.println(a);
+				
+			}
+			
+		}
+	}
+	public void	deleteBook() {
+		System.out.println("=== 도서 삭제 ===");
+		System.out.print("도서명 : ");
+		String title = sc.next();
+		System.out.print("저자명 : ");
+		String author = sc.next();
+		Book remove = bc.deleteBook(title, author);
+		if(remove!=null) {
+			System.out.println("성공적으로 삭제되었습니다.");
+		}else {
+			System.out.println("삭제할 도서를 찾지 못했습니다.");
+		}
+			
+			
 		
 		
 		
 	}
-	public void	searchBook() {}
-	public void	deleteBook() {}
-	public void ascBook() {}
-	
-	
-	
+	public void ascBook() {
+	    // 1. BookController의 ascBook() 메소드 호출
+		// 2. 메소드 호출 결과가 1이면 성공, 그 외 실패
+		// 3. 성공시 "정렬에 성공하였습니다." 출력 후 전체 목록 조회
+		// 4. 실패시 "정렬에 실패하였습니다." 출력
+			int result = bc.ascBook();
+			if(result == 1) {
+				System.out.println("정렬에 성공하였습니다.");
+			}else {
+				System.out.println("정렬에 실패하였습니다.");
+			}
+			
+					
+	}
 }

@@ -1,0 +1,57 @@
+package com.gn.homework02;
+
+import java.util.Objects;
+
+import com.gn.practice06.model.vo.Food;
+import com.gn.practice08.model.vo.Person;
+
+public class Lottery implements Comparable<Lottery>{
+	private String name;
+	private String phone;
+	
+	public Lottery() {}
+	public Lottery(String name, String phone) {
+		this.name = name;
+		this.phone = phone;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	@Override
+	public String toString() {
+		return null;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(name,phone);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		boolean result = false;
+		if(obj instanceof Lottery) {
+			Lottery f = (Lottery)obj;
+			if(f.name.equals(name)&& f.phone == phone) {
+				result = true;
+			}
+		}
+		return result;
+	}
+	@Override
+	public int compareTo(Lottery i) {
+		return this.name.compareTo(i.name);
+	}
+	
+	
+	
+	
+	
+}

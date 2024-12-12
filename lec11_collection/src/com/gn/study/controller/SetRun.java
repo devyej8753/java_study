@@ -1,9 +1,13 @@
 package com.gn.study.controller;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
+import com.gn.study.model.vo.Product;
 import com.gn.study.model.vo.Student;
 
 public class SetRun {
@@ -60,7 +64,7 @@ public class SetRun {
 		
 		Iterator<String> iterator = fruits.iterator();
 		
-		while(iterator.hasNext()) {
+			while(iterator.hasNext()) {
 			String fruit = iterator.next();
 			System.out.print(fruit);
 //			iterator.remove();
@@ -68,8 +72,25 @@ public class SetRun {
 //				System.out.print(", ");
 //			}
 		}
+		System.out.println();
 		
+		System.out.println("=== LinkedHashSet ===");
+		Set<String> set4 = new LinkedHashSet<String>();
+//		set4 = new HashSet<String>();
+//		set4 = new TreeSet<String>();
+		set4 = new TreeSet<String>(Collections.reverseOrder());
+		set4.add("동");
+		set4.add("서");
+		set4.add("남");
+		set4.add("북");
+     		System.out.println(set4);
 		
+     	Set<Product> set = new TreeSet<Product>();
+     	set.add(new Product("젤리",2000));
+     	set.add(new Product("사탕",500));
+     	set.add(new Product("홍삼",8000));
+     	
+		System.out.println(set);
 		
 	}
 
