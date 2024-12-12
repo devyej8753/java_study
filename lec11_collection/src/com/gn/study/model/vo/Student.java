@@ -1,5 +1,7 @@
 package com.gn.study.model.vo;
 
+import java.util.Objects;
+
 // 1.Comparable 추상한다
 public class Student implements Comparable<Student>{
 	public String name;
@@ -15,6 +17,12 @@ public class Student implements Comparable<Student>{
 	public String toString() {
 		return "[이름:"+name+",나이:"+age+"]";
 	}
+	
+	@Override
+	public int  hashCode() {
+		return Objects.hash(name,age);
+	}
+		
 	
 	@Override
 	public boolean equals(Object obj) {

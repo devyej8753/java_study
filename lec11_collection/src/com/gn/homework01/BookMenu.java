@@ -58,14 +58,14 @@ public class BookMenu {
 		}
 		Book book = new Book(title, author, category1, price);
 		System.out.println(book);
-		bc.insertBook(new Book(title, author, category1, price));
+		bc.insertBook(book);
 		
 		
 	}
 	public void	selectList() {
 		System.out.println("=== 전체 조회 ===");
 		BookController b = new BookController();
-		List<Book> arr = b.selectList();
+		List<Book> arr = bc.selectList();
 		if(arr.isEmpty()) {
 			System.out.println("존재하는 도서가 없습니다.");
 		}else {

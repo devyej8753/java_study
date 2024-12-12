@@ -16,7 +16,7 @@ public class Run {
 			System.out.println(n);
 		}
 		list.remove(1);
-		list.set(0, new Product());
+		list.set(0, new Product("오렌지",1500));
 		
 		System.out.println("=== 기본 for문으로 조회 ===");
 		for(int i = 0 ; i < list.size() ; i++) {
