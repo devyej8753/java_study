@@ -42,8 +42,8 @@ public class Book implements Comparable<Book>{
 		return title+author+category+price;
 	}
 	@Override
-	public int compareTo(Book o) {
-		return 0;
+	public int compareTo(Book other) {
+		return this.title.compareTo(other.title);
 	}
 		
 	

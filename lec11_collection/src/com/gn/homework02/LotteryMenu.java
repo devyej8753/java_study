@@ -39,9 +39,21 @@ public class LotteryMenu {
 		System.out.println("===== 1. 추첨 대상 추가 =====");
 		System.out.print("추가할 추첨 대상 수 : ");
 		int num = sc.nextInt();
-		
-		
-		
+		sc.nextLine();
+		int check = 0;
+		while(check != num) {
+			System.out.print("이름 : ");
+			String name = sc.nextLine();
+			System.out.print("휴대폰 번호(-빼고) : ");
+			String phone = sc.nextLine();
+			Lottery l = new Lottery(name,phone);
+			if(lc.insertObject(l)) {
+				check++;
+			}else {
+				System.out.println("중복된 대상입니다. 다시 입력해주세요.");
+			}
+		}
+		System.out.println(num+"명 추가 완료되었습니다.");
 		
 	}
 	public void deleteObject() {}

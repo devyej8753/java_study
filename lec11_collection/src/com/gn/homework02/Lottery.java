@@ -7,7 +7,7 @@ import com.gn.practice08.model.vo.Person;
 
 public class Lottery implements Comparable<Lottery>{
 	private String name;
-	private String phone;
+	String phone;
 	
 	public Lottery() {}
 	public Lottery(String name, String phone) {
@@ -38,16 +38,16 @@ public class Lottery implements Comparable<Lottery>{
 	public boolean equals(Object obj) {
 		boolean result = false;
 		if(obj instanceof Lottery) {
-			Lottery f = (Lottery)obj;
-			if(f.name.equals(name)&& f.phone == phone) {
+			Lottery l = (Lottery)obj;
+			if(l.name.equals(name)&& l.phone == phone) {
 				result = true;
 			}
 		}
 		return result;
 	}
 	@Override
-	public int compareTo(Lottery i) {
-		return this.name.compareTo(i.name);
+	public int compareTo(Lottery l) {
+		return this.name.compareTo(l.name);
 	}
 	
 	
