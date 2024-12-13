@@ -39,7 +39,7 @@ public class Lottery implements Comparable<Lottery>{
 		boolean result = false;
 		if(obj instanceof Lottery) {
 			Lottery l = (Lottery)obj;
-			if(l.name.equals(name)&& l.phone == phone) {
+			if(l.name.equals(name)&& l.phone.equals(phone) ) {
 				result = true;
 			}
 		}
