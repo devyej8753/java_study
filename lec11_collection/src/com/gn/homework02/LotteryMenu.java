@@ -35,13 +35,15 @@ public class LotteryMenu {
 		
 		}
 	}
-	
-	
-	
-	
-	
-	
-	public void	insertObject() {}
+	public void	insertObject() {
+		System.out.println("===== 1. 추첨 대상 추가 =====");
+		System.out.print("추가할 추첨 대상 수 : ");
+		int num = sc.nextInt();
+		
+		
+		
+		
+	}
 	public void deleteObject() {}
 	public void searchObject() {}
 	public void winObject() {}
