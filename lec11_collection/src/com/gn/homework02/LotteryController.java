@@ -32,7 +32,13 @@ public class LotteryController {
 		}
 		return result;
 	}
-	public Set<Lottery> winDbject(){
+	public Set<Lottery> searchObject() {
+		return lottery;
+	}
+	
+	
+	
+	public Set<Lottery> winObject(){
 		return lottery;
 	}
 	public Set<Lottery> sortedWinObject(){

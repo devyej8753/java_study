@@ -1,6 +1,6 @@
 package com.gn.homework02;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class LotteryMenu {
 	private Scanner sc = new Scanner(System.in);
@@ -56,8 +56,31 @@ public class LotteryMenu {
 		System.out.println(num+"명 추가 완료되었습니다.");
 		
 	}
-	public void deleteObject() {}
-	public void searchObject() {}
+	public void deleteObject() {
+		System.out.println("===== 2. 추첨 대상 삭제 =====");
+		System.out.print("이름 : ");
+		String name = sc.next();
+		System.out.print("핸드폰 번호('-'뺴고) : ");
+		String phone = sc.next();
+		
+		Lottery l = new Lottery(name,phone);
+		boolean result = lc.deleteObject(l);
+		if(result) {
+			System.out.println("삭제 완료되었습니다.");
+		}else {
+			System.out.println("존재하지 않는 대상입니다.");
+		}
+		
+		
+		
+		
+	}
+	public void searchObject() {
+		System.out.println("===== 3. 추첨 대상 목록 조회 =====");
+		System.out.println(lc.searchObject());
+		
+		
+	}
 	public void winObject() {}
 	public void sortedWinObject() {}
 	public void searchWinner() {}

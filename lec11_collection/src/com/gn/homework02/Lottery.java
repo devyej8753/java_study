@@ -28,7 +28,7 @@ public class Lottery implements Comparable<Lottery>{
 	}
 	@Override
 	public String toString() {
-		return null;
+		return "[이름= " + name + ", 휴대폰 번호 =" + phone + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -47,7 +47,14 @@ public class Lottery implements Comparable<Lottery>{
 	}
 	@Override
 	public int compareTo(Lottery l) {
-		return this.name.compareTo(l.name);
+		String str = name;
+		String obj = l.name;
+		if(str.equals(obj)) {
+			String Phone = phone;
+			String objPhone = l.phone;
+			return Phone.compareTo(objPhone);
+		}
+		return this.name.compareTo(obj);
 	}
 	
 	
