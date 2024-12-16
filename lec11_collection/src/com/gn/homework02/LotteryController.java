@@ -39,8 +39,21 @@ public class LotteryController {
 	
 	
 	public Set<Lottery> winObject(){
-		return lottery;
-	}
+		
+		if(lottery.size()<4) {
+			return null;
+		}else {
+			List<Lottery> list = new ArrayList<Lottery>();
+//			while(win.size() >= 4) {
+//				int i =(int)(Math.random()*list.size());
+//				win.contains(list.get(i));
+//				}
+			return win;
+			}
+		}
+		
+		
+	//}
 	public Set<Lottery> sortedWinObject(){
 		return lottery;
 	}

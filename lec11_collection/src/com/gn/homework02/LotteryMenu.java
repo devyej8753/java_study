@@ -81,7 +81,19 @@ public class LotteryMenu {
 		
 		
 	}
-	public void winObject() {}
+	public void winObject() {
+		System.out.println("===== 4. 당첨 대상 구성 =====");
+		if(lc.winObject()==null) {
+			System.out.println("추첨 대상이 4명이상이어야 당첨 대상을 구성할 수 있습니다.");
+		}else {
+			System.out.println(lc.winObject());
+		}
+		
+		
+		
+		
+		
+	}
 	public void sortedWinObject() {}
 	public void searchWinner() {}
 	
