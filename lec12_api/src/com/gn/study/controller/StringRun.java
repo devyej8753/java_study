@@ -105,6 +105,33 @@ public class StringRun {
 		System.out.println("대문자 변환: "+ upperCase);
 		System.out.println("소문자 변환: "+ lowerCase);
 		
+		// valueOf
+		double pi = 3.14;
+		String piStr = String.valueOf(pi);
+		System.out.println(piStr+2.1);
+		
+		// StringBuilder  문자열 추가
+		StringBuilder sb = new StringBuilder("Hello");
+		sb.append("world!!");
+		System.out.println(sb);
+		
+		// insert  원하는 위치에 문자열 추가
+		sb.insert(5, " Java ");
+		System.out.println(sb);
+		
+		// delete 문자열 삭제
+		sb.delete(11, 16+1);
+		System.out.println(sb);
+		
+		// deleteCharAt(인덱스)
+		int idx = sb.indexOf("!");
+		sb.deleteCharAt(idx);
+		System.out.println(sb);
+		
+		// reverse 문자열 뒤집기
+		sb.reverse();
+		System.out.println(sb);
+		
 		
 	}
 
