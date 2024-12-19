@@ -18,7 +18,6 @@ public class Run {
 			arr = arr.toUpperCase();
 			// 새로 LocalTime after 선언
 			LocalTime last = LocalTime.now();
-			DateTimeFormatter dtf1 	= DateTimeFormatter.ofPattern("ss");
 			long daysBetween = ChronoUnit.SECONDS.between(start, last);
 			if("Y".equals(arr)) {
 				System.out.println("경과(초) : "+daysBetween); // after-start
