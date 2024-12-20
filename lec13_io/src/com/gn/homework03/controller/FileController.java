@@ -8,19 +8,18 @@ public class FileController {
 	
 	public boolean checkName(String file) {
 		fd.checkName(file);
-		
-		
-		return false;
+		return fd.checkName(file);
 	}
 	public void fileSave(String file, StringBuilder sb) {
-		
+		fd.fileSave(file, sb.toString());
 	}
 	
 	public StringBuilder fileOpen(String file) {
-		return null;
+		fd.fileOpen(file);
+		return fd.fileOpen(file);
 	}
 	public void fileEdit(String file, StringBuilder sb) {
-		
+		fd.fileEdit(file, sb.toString());
 	}
 	
 	
