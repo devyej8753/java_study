@@ -1,12 +1,6 @@
 package com.gn.homework03.model.dao;
 
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class FileDAO {
 	
@@ -20,39 +14,26 @@ public class FileDAO {
 		return checkFile.exists();
 	}
 	public void fileSave(String file, String s) {
-		File savefile = new File(total);
-//		if (savefile.exists()==false) {
-//			savefile.mkdirs();
-//		}
-		File arr = new File(savefile,file);
-		try(BufferedOutputStream save = new BufferedOutputStream(new FileOutputStream(arr))){
-			byte[] num = s.getBytes();
-			save.write(num);
-			
+		try(FileWriter save = new FileWriter(file)) {
+			save.write(s);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
-
 	}
 	public StringBuilder fileOpen(String file) {
-		File Open = new File(total,file);
-		
 		StringBuilder sb = new StringBuilder();
-		try(BufferedReader br = new BufferedReader(new FileReader(file))){
-			while(true) {
-				String date = br.readLine();
-				if(date == null) {
-					break;
-				}
-				sb.append(date).append("\n");
+		try(FileReader br = new FileReader(file)){
+			int value;
+			while((value = br.read()) != -1) {
+				sb.append((char)value);
 			}
-		} catch (Exception e) {
+		}catch(Exception e){
 			e.printStackTrace();
 		}
-		return sb;
+		return sb;	
+			
 	}
 	public void fileEdit(String file, String s) {
-		File Edit = new File(total,file);
 		try(FileOutputStream fos = new FileOutputStream(file,true)){
 				String str = s;
 				byte[] b = str.getBytes();
@@ -65,3 +46,5 @@ public class FileDAO {
 	
 	
 }
+
+	
