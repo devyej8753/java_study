@@ -32,6 +32,7 @@ public class FileMenu {
 		public void fileSave() {
 			StringBuilder str = new StringBuilder();
 			String user = "";
+			sc.nextLine();
 			do {
 				System.out.println("파일에 저장할 내용을 입력하세요.");
 				System.out.println("ex끝it  이라고 입력하면 종료됩니다.");
@@ -46,14 +47,12 @@ public class FileMenu {
 			String file = null;
 			do {
 				System.out.print("저장할 파일 명을 입력해주세요(ex. myFile.txt) : ");
-				file = sc.nextLine();
-				
+				file = sc.next();
 				check = fc.checkName(file);
-				
 				if(check) {
 					System.out.print("이미 존재하는 파일입니다. 덮어쓰시겠습니까? (y/n) : ");
-					String answer = sc.nextLine();
-					if(answer.equals("Y")) {
+					String answer = sc.next();
+					if(answer.equals("Y")||answer.equals("y")) {
 						fc.fileSave(file, str);
 						check = false;
 					}else {
@@ -63,13 +62,40 @@ public class FileMenu {
 					fc.fileSave(file, str);
 				}
 			}while(check);
-			
-			
 		}
 		public void fileOpen() {
-			
+			System.out.print("열 파일 명 : ");
+			String fileName = sc.next();
+			sc.nextLine();
+			if(fc.checkName(fileName)== true) {
+				System.out.print(fc.fileOpen(fileName));
+			}else {
+				System.out.println("없는 파일입니다.");
+			}
 		}
+		
 		public void fileEdit() {
+			StringBuilder sb = new StringBuilder();
+			System.out.println("수정할 파일 명");
+			String edit = sc.next();
+			if(fc.checkName(edit)==false) {
+				System.out.println("없는 파일입니다.");
+			}else {
+				while(true) {
+					System.out.println("파일에 저장할 내용을 입력하세요");
+					System.out.println("ex끝it 이라고 입력하면 종료됩니다.");
+					System.out.print("내용 : ");
+					String str = sc.next();
+					if(str.equals("ex끝it")) {
+						break;
+					}
+					sb.append(str);
+				}
+				fc.fileEdit(edit, sb);
+			}
+			
+			
+			
 			
 		}
 		
